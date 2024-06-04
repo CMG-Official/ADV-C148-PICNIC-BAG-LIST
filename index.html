@@ -1,0 +1,70 @@
+
+<html>
+<head>
+  <title>ADV-C148: PICNIC BAG LIST</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Skranji&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<center>
+<h1 class="titl">ADV-C148: PICNIC BAG LIST</h1>
+<br>
+<br>
+<br>
+    <video width="400" controls>
+        <source src="vid.mp4" type="video/mp4">
+    </video>
+    <br>
+    <br>
+    <br>
+    <pre>
+      <code>
+          from tkinter import *
+          from tkmacosx import *
+          import random
+
+          root = Tk()
+          root.title("A root window!")
+          root.geometry("550x300")
+
+          label_list = Label(root)
+          label_item = Label(root)
+
+          list_items = ["Bottle", "Tiffin", "Id Card", "Chocolates", "Chips", "Tickets", "Hanky"]
+          label_list["text"] = "Listed Items : " + str(list_items)
+
+          def bag_items():
+              random_item = random.sample(range(1, 7), 1)
+              label_item["text"] = "Put Item No. " + str(random_item) + " In Bag"
+
+          label_list.place(relx = 0.5, rely = 0.4, anchor = CENTER)
+
+          btn = Button(root, text = "Which Item To Put In Bag ?", command = bag_items, bg = "green", fg = "white")
+          btn.place(relx = 0.5, rely = 0.5, anchor = CENTER)
+
+          label_item.place(relx = 0.5, rely = 0.6, anchor = CENTER)
+
+          root.mainloop()
+      </code>
+    </pre>
+    
+<div class="contn">
+
+</div>
+</center>
+<div class="copyright_footer"> Devloped By : Tejas</div>
+</body>
+<script src="main.js"></script>
+</html>
+
+
